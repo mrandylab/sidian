@@ -1,0 +1,206 @@
+<html>
+<head>
+	    <script type="text/javascript" src="https://ekinerja.baritoutarakab.go.id/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ekinerja.baritoutarakab.go.id/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ekinerja.baritoutarakab.go.id/assets/js/app.min.js"></script>
+    
+
+    
+<link href="https://ekinerja.baritoutarakab.go.id/assets/css/app/present.css" rel="stylesheet"  />
+<link href="https://ekinerja.baritoutarakab.go.id/assets/css/opd.css" rel="stylesheet"  />
+    <script type="text/javascript" src="https://ekinerja.baritoutarakab.go.id/assets/js/general.js"></script>
+    <script type="text/javascript" src="https://ekinerja.baritoutarakab.go.id/assets/js/dm.js"></script> 
+</head>
+<body>
+	<div id="div_notif"></div>
+</body>
+</html>
+<script type="text/javascript">
+// document.cookie = 'ekinbarut=GjZVduWxjIpqoI1M7Uaf3z0aSdQVpWZh58li3Zp4TxL1eHufBABhXO%2B4Iqr9glu11UiYWKNr%2B8NJ15m5enYtw6bvRzn1Ynxddcv77vorgOg2o%2B%2BPZzNwCcUHa2TG5hHq5Sl5B2%2FXihe1ppdOo2BJEJLlc83gE3C3iKiFsAs2abxRaP1XgEpqGUaf%2Fv%2Bhhuzf97ODakoViVpLxYj1bAWv%2Fwu3HNqKOHVuyJIje%2Bu4XhbhaHIXePotKHZ%2BmWBv0IG49QMST%2BuHoGOYsiXBczkKL4WDSOUNCoqpuC0uTKicqMxvo0gQ5oEKXlDJaGKF9ZqlnlrOg4bJ%2BfseZMqzJ5EcfcGNc0jXymdWzE%2BuIwRNorhuzKG6RRLUJufy%2B01arF4i0mxPQ50dRFhP2tZi6m6kYaounjpQMxywGZpZOQRlGxCuC90rwt3cAurxk7%2BGmSMnOzJzkQq1vGvrVo4O27AiLoFP6sdaHZUCim%2BHJR5pFq9UCBjSsc9XbcvdYwLaofU25smoSM0THMukmto43H4uLhvO6%2Bye%2F2cB6SKngadvHhcq27RlbVMLNaoxknSIGrO6u741je9sVh5Fa4liEdaykiTygVUL4zrBHKazalhvNsa9U6dbA%2FipdGx3MowA0A7MB9CUp44EO6tV7mKMjYXn8yAjIvjOubnO5EOF8NNdRz7zL8EcFYu20sMDsxDo8wJuWicscuD6zYtZcSAgwXaKoAuL9LoYuNsbIkpn8Hm7DkfDq3PdK6Xhj%2BR42IMYPE1QVbMaXC9rD9ERNW3zA1WXeGFLQHiqkjtfeqU9elkJAK6P4g%2FB3ei5Mgac3rXup6DloNfpcFIjE70aWCHLz87xj9JlG4%2F6trRKWsFtNUJ5eSh2pSoZKX1HGmPBBo1AlLDdiKU2muC1aIT7ompywFBpGvFfYUZVPhBuTlEl%2FDkUQeSN%2Fj8R2kNDl7yWrze6iXaQ36faAkBKKQ8g%2FPWdnpxNtuFUPFpMlBq0fyVLQLsjMOBky8T8BjIDkutVPpnVH05m9rJ3SWoCP%2BRPdqXOEQdrBulY7kyT%2Bb%2FXxZIjbwpXhLNc%2Fln31cp6aWtMjcO2xQGoU4xocGhuRE5MuDsU3CuHbeeIyfTGukDjktSGXFA6DA%2BOCOCq7hmeNUZrWY9vC9PVLmJyoEjuAqKo9OVXRpfp%2BwOUYIM9EfAKq1npoo1wfE6rMqWwT6u5Ws4T3m2mKUvbrAQQkOr%2Bi9gf9g9LH7jgIVCorUPRgCpD0NkGMOJacFW44WpsYOJ0d%2BmZUQBr4wipBydBcJhYGisdBvDsU1eiibMZUqUnhPlwM%2BO0UcXLOriJt63f%2FEhWO0Q7kfVoJpu%2FzcNiF9jl%2FF26w0rqmf%2FrxctZi5%2FQRqgPdMHvQfzvCo21zK0pnmYYDW%2BtT2Rg8Rq2EiAvb%2Fhv2cptmTD1S0xa34ccCkPTZKLaIAMBfOns8HCZ20R%2BLklF7m8fIVwavP2w42bponOEZxuz1FUk1f5Xl97ux%2FbZqSMvCg%2B6RxwwyNhMm9tZ7l9UI32WtvsIThTkvcfm5lSnzOwQnQcr1txRhDt67Gy9c1IrNYnWACkYzOo%3D405b2c2612ebd35db8b2295d9be744f887de973f; expires=Tue, 22-Apr-2025 13:13:15 GMT; Max-Age=7200; path=ekinerja.baritoutarakab.go.id; secure';
+
+
+            var oldcrc=0;
+            var mparam='';
+            var code_jsn='Hi';
+            var ambil=0;
+            var timeup=10;
+            
+            function update() {
+              $('#div_notif').html(' ...');
+              ambil++; 
+              $.ajax({
+                type: 'POST',
+                url: 'https://ekinerja.baritoutarakab.go.id/present/notif/code'+'/'+code_jsn,
+                timeout: 12000,
+                dataType: 'json',
+                data: 'crc='+oldcrc,
+                success: function(data) {
+                   if(parseInt(data.ret)==1)$('#div_reload').html(data.data);
+                   if(data.crc)oldcrc=data.crc;
+                  $('#div_notif').html('');
+                  if(parseInt(data.norep)==1)code_jsn='none'; 
+                  if(code_jsn != 'none'){
+                    if(ambil < timeup)window.setTimeout(update, 12000);
+                  }else{
+                    oldcrc=0;
+                    window.clearTimeout(); 
+                  }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                  $('#div_notif').html('Timeout contacting server..');
+                  if(code_jsn != 'none')window.setTimeout(update, 36000);
+                }
+            });
+            }
+            
+            function load_cnt(kode_act) {
+                window.clearTimeout(); 
+                $.ajax({
+                  url: 'https://ekinerja.baritoutarakab.go.id/present/home/isi_index2',
+                  type: 'POST',                  
+                  cache: false,
+                  dataType: 'json',
+                  data:'json=1&kodeview='+kode_act,
+                  success: function(msg) {
+                      if(parseInt(msg.ret)>=1){
+                        code_jsn=msg.code_jsn;
+                        $('#ld_cnt').html(msg.data);
+                        myparam=msg.param;
+                        oldcrc=0;
+                      }
+                  },
+                  error:function (XMLHttpRequest, textStatus, errorThrown) {
+                      $('#ld_cnt').html('Timeout contacting server kita..');
+                  }
+                });
+                return;
+            }
+        $(document).ready(function(){
+
+	$('#myModal').on('hide.bs.modal', function(){
+		$('#myModal').removeData();
+	})
+    $('.heading').parent().find('td').addClass('headings');
+    
+                        var lat=0;
+                        var lng=0;
+                        var dtm=0;
+                        var rep=0;
+                        var options = {
+                          enableHighAccuracy: true,
+                          timeout: 4000,
+                          maximumAge: 0
+                        };
+                        
+                        function dArr(num) {
+                            var buf = new ArrayBuffer(8);var lN = new Float64Array(buf);lN[0] = num;
+                            return Array.from(new Int8Array(buf)).reverse();  // reverse
+                        }
+                        function tHS(bA) {return Array.from(bA, function(by) {return ('0' + (by & 0xFF).toString(16)).slice(-2);}).join('')}
+
+                        dtm1a = new Date();
+                        dtma = new Date();
+
+                        xplat =-0.9442007480306702 
+                        xlng =114.9051582813263
+                        nsmc=((xplat!=lat || xlng!=lng)?1:0);
+
+                        desa=tHS(dArr(xplat))+'-'+tHS(dArr(xlng))+','+rep+','+(dtm1a-dtma)+','+nsmc+','+10000;
+                        alert(desa); //0000000000000000-0000000000000000,0,0,1,10000
+                        //i=2122375&v=2.6&e=bfee36e47cb4d09c-405cb9ee1d000000,0,0,1,10000
+
+                        function sndd(){
+                            $('#msgpresent').html('*');
+                          let des=tHS(dArr(lat))+'-'+tHS(dArr(lng))+','+rep+','+(dtm1-dtm)+','+nsm+','+10000;
+                          $.ajax({
+                            url: 'https://ekinerja.baritoutarakab.go.id/present/map/send_loc',
+                            type: 'POST',
+                            cache: false,
+                            dataType: 'json',
+                            data:'i=2122375&v=2.6&e='+des,
+                            success: function(msg) {
+                                /*console.log(msg);*/
+                                var diarea=0;
+                                if(parseInt(msg.inarea) > 0)diarea=1;
+                                $('#msgpresent').html(msg.nama);/*(diarea?'Terekam pada area ':'')+*/
+                                if(parseInt(msg.ret)>=0 && !diarea)$('#btn-pressh a').show();
+                            },
+                            error:function(error){
+                                console.log('error');
+                                console.log(error);
+                            }
+                          });
+                          
+                        }
+                        
+                        function succp(pos) {
+                            var aok=['Out side','OK'];
+                              var crd = pos.coords;
+                              plat= crd.latitude;
+                              plng= crd.longitude;
+                            if(! lat){
+                                lat=plat;
+                                lng=plng;
+                                dtm = new Date();
+                                console.log('A pLat :'+plat+' pLng :'+plng+' Rep '+rep+' Pos '+pos+' dtm:'+dtm);
+                                setTimeout(function(){navigator.geolocation.getCurrentPosition(succp, errp, options);},10000);
+                            
+                              }else{
+                                dtm1 = new Date();
+                                nsm=((plat!=lat || plng!=lng)?1:0);
+                                
+                                console.log('B pLat :'+plat+' Lat :'+lat+' pLng :'+plng+' Lng :'+lng+' Rep '+rep+' Nsm '+nsm+' Sls '+(dtm1-dtm)+' Dtm '+dtm1);
+                                
+                                if(nsm||rep >= 1){
+                                  
+                                  $('#msgpresent').html('');
+                                  $('#btn-pressh').show();
+                                }else{
+                                    rep++;
+                                    console.log('C Lat :'+lat+' Rep '+rep);
+                                    setTimeout(function(){navigator.geolocation.getCurrentPosition(succp, errp, options);},10000);
+                                }
+                              }
+                        }
+
+                        function errp(err) {
+                          /*console.warn(`ERROR(${err.code}): ${err.message}`);*/
+                          $('#msgpresent').html(err.message);
+                          /*$('#btn-pressh a').show();*/
+                        }
+
+                        function navh() {
+                            /*var options = {
+                              enableHighAccuracy: true,
+                              timeout: 4000,
+                              maximumAge: 0
+                            };*/
+                            $('#btn-pressh').hide();
+                            $('#msgpresent').html('...')
+                            
+                            navigator.geolocation.getCurrentPosition(succp, errp, options);
+                            /*setTimeout(function(){
+                                navigator.geolocation.getCurrentPosition(succp, errp, options);
+                            },10000);*/
+                            return false;
+                        }
+                            
+                        $('#btn-pressh').click(function() { $(this).prop('disabled', true);
+                            
+                            sndd();
+                            $(this).hide();
+                            /*window.location.reload()*/;
+                            return false;});
+                        navh();
+                    
+            $('.tap').click(function() {
+                var act=$(this).attr('act');
+                var linya=$(this).parent('li');
+                var atasnya=$(this).parent().parent('ul');
+                if(act)load_cnt(act);
+                atasnya.find('li').removeClass('active');
+                linya.addClass('active');
+            });
+            load_cnt('Hi');
+        }); 
+</script>
